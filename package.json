@@ -1,0 +1,14 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nestor Pereira da Silva Júnior",
+  "license": "ISC",
+  "description": "API studies",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
