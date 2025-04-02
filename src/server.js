@@ -18,7 +18,8 @@ app.use(express.json())
 
 app.post('/users', (req, res)=> {
     const {name, email, pass} = req.body
-    res.send(`POST: ${name} + ${email} + ${pass}`)
+    // res.send(`POST: ${name} + ${email} + ${pass}`)
+    res.json({name, email, pass})
 })
 
 const PORT = 3333
