@@ -1,9 +1,12 @@
 const { Router } = require("express")
+const UsersController = require('../controllers/UsersController')
 const usersRoutes = Router()
 
-usersRoutes.post('/', (req, res)=> {
-    const {name, email, pass} = req.body
-    res.json({name, email, pass})
-})
+/**
+ * Criar uma instância da classe: UsersController que foi importada
+ */
+const usersController = new UsersController()
+
+usersRoutes.post('/', usersController.create)
 
 module.exports = usersRoutes;
