@@ -9,7 +9,7 @@ class UsersController {
 
     create(req, res) {
         const {name, email, pass} = req.body
-        res.json({name, email, pass})
+        res.status(201).json({name, email, pass})
     }
 }
 
