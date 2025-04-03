@@ -7,6 +7,13 @@ const usersRoutes = Router()
  */
 const usersController = new UsersController()
 
-usersRoutes.post('/', usersController.create)
+
+function myMiddleware(req, res, next){
+    console.log('passou no middleware')
+    next()
+}
+
+
+usersRoutes.post('/', myMiddleware, usersController.create)
 
 module.exports = usersRoutes;
